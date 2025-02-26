@@ -32,5 +32,5 @@ $plugin->supported = [405, 405];      //  Moodle 4.1.x are supported.
 $plugin->maturity = MATURITY_BETA; // MATURITY_ALPHA, MATURITY_BETA, MATURITY_RC or MATURITY_STABLE
  
 $plugin->dependencies = [
-	'tool_htmlbootstrapeditor' => 2021013100
+	'tool_htmlbootstrapeditor' => 2025013000
 ];

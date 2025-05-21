@@ -57,18 +57,35 @@ class plugininfo extends plugin implements plugin_with_buttons, plugin_with_menu
         return isloggedin() && !isguestuser() && $canhavefiles && $canhaveexternalfiles;
     }
 
+    /**
+     * Get the internal name of the toolbar button.
+     * @return string[]
+     */
     public static function get_available_buttons(): array {
         return [
             'tiny_htmlbootstrapeditor/tiny_htmlbootstrapeditor',
         ];
     }
 
+    /**
+     * Get the internal name of the menu item.
+     * @return string[]
+     */
     public static function get_available_menuitems(): array {
         return [
             'tiny_htmlbootstrapeditor/tiny_htmlbootstrapeditor',
         ];
     }
 
+    /**
+     * Returns the configuration values the plugin needs to take into consideration.
+     *
+     * @param context $context
+     * @param array $options
+     * @param array $fpoptions
+     * @param editor|null $editor
+     * @return array
+     */
     public static function get_plugin_configuration_for_context(
         context $context,
         array $options,

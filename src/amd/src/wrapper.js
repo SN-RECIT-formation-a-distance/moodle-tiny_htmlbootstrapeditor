@@ -19,7 +19,6 @@
  * @copyright  2019 RECIT
  * @license    {@link http://www.gnu.org/licenses/gpl-3.0.html} GNU GPL v3 or later
  */
-///import {get_string as getString} from 'core/str';
 import {getFilePicker} from 'editor_tiny/options';
 
 export class Editor {
@@ -39,11 +38,6 @@ export class Editor {
         url += "/admin/tool/htmlbootstrapeditor/view.php";
 
         this.globalVars.popup = window.open(url, 'HTML Bootstrap Editor', 'scrollbars=1');
-
-        /*if (this.globalVars.popup.outerWidth < screen.availWidth || this.globalVars.popup.outerHeight < screen.availHeight){
-            this.globalVars.popup.moveTo(0,0);
-            this.globalVars.popup.resizeTo(screen.availWidth, screen.availHeight);
-        }*/
 
         this.globalVars.popup.IWrapper = M.recit.htmlbootstrapeditor.IWrapper;
 
@@ -101,7 +95,7 @@ export class Editor {
             if (typeof M == 'undefined'){
                 return str;
             }
-            //let moodle = M || window.parent.M;
+            
             return M.util.get_string(str, 'tool_htmlbootstrapeditor');
         };
 
